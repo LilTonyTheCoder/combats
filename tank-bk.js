@@ -234,11 +234,13 @@ function createFight() {
 
 		if ( personage.createByMyself ) {	// сам создаю заявку ( только после того, как проверил, что других нет или не подходят )
 			frames[10].document.getElementById("dv2").children[0].click();
-			frames[10].document.getElementsByName("startime2")[0].selectedIndex= 0;
-			frames[10].document.getElementsByName("levellogin1")[0].selectedIndex= 1;
-			frames[10].document.getElementById("dv1").children[0].getElementsByTagName("input")[6].click();
-			personage.createByMyself = false;
-			console.log("Создал заявку сам");
+			setTimeout(function(){
+				frames[10].document.getElementsByName("startime2")[0].selectedIndex= 0;
+				frames[10].document.getElementsByName("levellogin1")[0].selectedIndex= 1;
+				frames[10].document.getElementById("dv1").children[0].getElementsByTagName("input")[5].click();
+				personage.createByMyself = false;
+				console.log("Создал заявку сам");
+			},1000);
 			createStats.needToRefresh = 2;
 			return;
 		}
