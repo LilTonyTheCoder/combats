@@ -2,6 +2,7 @@ import startFi from './startFi/index.js';
 import createFight from './createFight/index.js';
 import dungeonWalker from './dungeonWalker/index.js';
 import movesList from './maps.js';
+import cheatMenu from './cheatMenu/index.js'
 
 import rand from './utils/rand.js';
 import checkPlace from './utils/checkPlace.js';
